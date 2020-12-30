@@ -18,9 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
     getFoodCards()
 })
 
-document.body.scrollTop = 0;
-document.documentElement.scrollTop = 0;
-
 // Button horizontal scroll homepage
 const btnRightScroll = document.getElementById("scroll-right");
 
@@ -292,4 +289,10 @@ function sendComplete() {
                     <h4>Berhasil!!! &#129395</h4>
                     <p>Selamat, jajanan kamu sudah dikirim. <br> Silakan lihat chat LINE kamu.</p>`;
     }
+}
+
+function isloaded() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    document.querySelector(".preload").classList.add("hidden");
 }

@@ -55,13 +55,13 @@ function initializeApp() {
     getClientProfile()
     registerButtonHandlers();
     if (liff.isLoggedIn()) {
-        document.querySelector(".preload").classList.add("hidden");
+        isloaded()
         document.querySelector(".login-page").classList.add("hidden");
         document.getElementById("header").classList.remove("hidden");
         document.getElementById("display-food").classList.remove("hidden");
         document.getElementById("footer").classList.remove("hidden");
     } else {
-        document.querySelector(".preload").classList.add("hidden");
+        isloaded()
         document.querySelector(".login-page").classList.remove("hidden");
         document.getElementById("tab-section").classList.add("hidden");
     }
