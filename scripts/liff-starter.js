@@ -59,8 +59,9 @@ function initializeApp() {
         document.querySelector(".login-page").classList.add("hidden");
         document.getElementById("header").classList.remove("hidden");
         document.getElementById("display-food").classList.remove("hidden");
-        document.getElementById("tab-section").classList.remove("hidden");
         document.getElementById("footer").classList.remove("hidden");
+    } else {
+        document.getElementById("tab-section").classList.add("hidden");
     }
 }
 
