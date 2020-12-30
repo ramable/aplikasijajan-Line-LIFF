@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", function () {
     getFoodCards()
 })
 
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+
 // Button horizontal scroll homepage
 const btnRightScroll = document.getElementById("scroll-right");
 

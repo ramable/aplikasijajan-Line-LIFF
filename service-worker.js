@@ -1,4 +1,4 @@
-const CACHE_NAME = "jajankuy-v12";
+const CACHE_NAME = "jajankuy-v3";
 const urlsToCache = [
     "/",
     "/index.html",
