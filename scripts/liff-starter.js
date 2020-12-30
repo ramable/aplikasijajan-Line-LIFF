@@ -81,7 +81,7 @@ function displayIsInClientInfo() {
 function getClientProfile() {
     liff.getProfile().then(data => {
             document.querySelector(".display-name").innerText = data.displayName;
-            document.querySelector("name-tab").innerText = data.displayName;
+            document.querySelector(".name-tab").innerText = data.displayName;
             document.getElementById("status").innerText = data.statusMessage;
             document.querySelector(".display-picture").innerHTML = `<img class="circle responsive-img" src="${data.pictureUrl}">`;
             document.querySelector(".header-photo").innerHTML = `<img class="circle responsive-img" src="${data.pictureUrl}">`;
