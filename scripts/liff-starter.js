@@ -57,11 +57,10 @@ function initializeApp() {
 
     if (liff.isLoggedIn()) {
         document.querySelector(".login-page").classList.add("hidden");
-    } else {
-        document.getElementById("header").classList.add("hidden");
-        document.getElementById("display-food").classList.add("hidden");
-        document.getElementById("tabs").classList.add("hidden");
-        document.getElementById("footer").classList.add("hidden");
+        document.getElementById("header").classList.remove("hidden");
+        document.getElementById("display-food").classList.remove("hidden");
+        document.getElementById("tabs").classList.remove("hidden");
+        document.getElementById("footer").classList.remove("hidden");
     }
 }
 
@@ -82,7 +81,7 @@ function getClientProfile() {
     liff.getProfile().then(data => {
             document.querySelector(".display-name").innerText = data.displayName;
             document.querySelector(".name-tab").innerText = data.displayName;
-            document.getElementById("status").innerText = data.statusMessage;
+            document.getElementById("status").innerText = data.statusMessage === undefined ? "Tidak Ada Status" : data.statusMessage;
             document.querySelector(".display-picture").innerHTML = `<img class="circle responsive-img" src="${data.pictureUrl}">`;
             document.querySelector(".header-photo").innerHTML = `<img class="circle responsive-img" src="${data.pictureUrl}">`;
             document.getElementById("display-cover").innerHTML = `<div class="cover" style="background-image: url(${data.pictureUrl});">

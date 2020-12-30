@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const elems = document.querySelector('.modal');
     instances = M.Modal.init(elems);
+
+    getFoodCards();
 })
 
 // Button horizontal scroll homepage
@@ -61,9 +63,22 @@ function currencyConvert(nominal) {
 }
 
 // Get Data Food
-fetch("products.json")
-    .then(response => response.json())
-    .then(data => showFoodCards(data))
+function getFoodCards() {
+    if ("caches" in window) {
+        caches.match("products.json").then(function (response) {
+            if (response) {
+                response.json().then(function (data) {
+                    showFoodCards(data);
+                })
+            }
+        })
+    }
+    fetch("products.json")
+        .then(response => response.json())
+        .then(data => {
+            showFoodCards(data);
+        })
+}
 
 function showFoodCards(data) {
     const foodList = data.items;
