@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const elems = document.querySelector('.modal');
     instances = M.Modal.init(elems);
 
-    getFoodCards();
+    getFoodCards()
 })
 
 // Button horizontal scroll homepage
