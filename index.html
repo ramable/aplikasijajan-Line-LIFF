@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=480, initial-scale=0.8, maximum-scale=0.78, minimum-scale=0.5">
+
+    <link rel="shortcut icon" href="images/assets/JK-icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/assets/JK-icon.png" type="image/png">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/materialize.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <title>Foodies</title>
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col s9">
+                    <h4>Hai, <span class="display-name">User</span> &#128075</h4>
+                    <p>Selamat datang di JajanKuy!</p>
+                </div>
+                <div class="col s3">
+                    <img class="header-photo circle responsive-img" src="images/assets/profile.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container login-page">
+        <h3>Aduuuh&#128517</h3>
+        <p>Sepertinya kamu belum Login dengan akun LINE</p>
+        <img class="img-order" src="/images/assets/undraw_Login_re_4vu2.svg" alt="">
+        <p>Sebelum jajan login dulu ya ...</p>
+        <button id="btn-login" class="btn waves-effect waves-light btn-login" type="submit" name="action">login
+            dengan
+            <b>LINE</b>
+        </button>
+        <div class="footer-login">
+            <p>Aplikasi ini didukung dengan fitur LINE Login <br> Silakan kunjungi laman <strong><a class="green-text"
+                        href="https://developers.line.biz/en/docs/line-login/overview/">LINE
+                        Developer Console</a></strong>
+                <br>untuk informasi lebih lanjut</p>
+        </div>
+    </div>
+
+    <main>
+        <section id="display-food">
+            <div class="container">
+                <h5 class="title-section">Jajan Dulu Kuy &#128071</h5>
+                <button class="btn-floating waves-effect waves-light btn-left" type="button" name="action"
+                    id="sroll-left" onclick="slideLeft()">
+                    <i class="material-icons green-text text-accent-4">keyboard_arrow_left</i>
+                </button>
+                <button class="btn-floating waves-effect waves-light btn-right" type="button" name="action"
+                    id="scroll-right" onclick="slideRight()">
+                    <i class="material-icons green-text text-accent-4">keyboard_arrow_right</i>
+                </button>
+                <div class="row scroller"></div>
+            </div>
+        </section>
+
+        <section id="tabs">
+            <div class="container">
+                <ul class="tabs">
+                    <li class="tab col"><a href="#cart-tab">Keranjang</a></li>
+                    <span class="total-item hidden" id="total-item">0</span>
+                    <li class="tab col"><a class="active" href="#profile">Profil</a></li>
+                </ul>
+
+                <!-- Cart Tab -->
+                <div id="cart-tab" class="col s12">
+                    <div class="empty-cart">
+                        <img src="images/assets/undraw_add_to_cart_vkjp.svg" alt="">
+                        <h4>Hmmm... <br> Kurang Jajan &#128557</h4>
+                        <p>Jajanan kamu masih kosong nih. <br> Cari jajan dulu kuy!</p>
+                    </div>
+                    <div class="cart-content"></div>
+                    <div class="total hidden" id="total">
+                        <div class="row">
+                            <div class="col s7">
+                                <p>Total :</p>
+                                <h5 class="total-text"><strong>Rp <span class="cart-total"
+                                            id="cart-total">0</span></strong></h5>
+                            </div>
+                            <div class="col s5">
+                                <button class="btn modal-trigger waves-effect waves-light btn-buy btn-trend"
+                                    type="submit" name="action" data-target="modal1">Beli</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Tab -->
+                <div id="profile" class="col s12">
+                    <div id="display-cover">
+                        <div class="cover" style="background-image: url();">
+                        </div>
+                    </div>
+                    <div class="photo-profile display-picture">
+                        <img class="circle responsive-img" src="images/assets/profile.jpg">
+                    </div>
+                    <div class="name-profile">
+                        <div class="container">
+                            <h5><span class="display-name">Display Name</span></h5>
+                            <p><span id="status">Status</span></p>
+                            <div class="row-profile">
+                                <p>Kamu sedang membuka aplikasi <br> JajanKuy melalui <strong><span
+                                            id="open-running">Browser LINE </span><span
+                                            id="line-version">v.0.0.0</span></strong><br>dengan sistem <strong
+                                        id="get-os">Android</strong></p>
+                            </div>
+                        </div>
+
+                        <div class="btn-handling">
+                            <a class="btn btn-exbrowser" id="open-window">buka di external browser<i
+                                    class="material-icons left">open_in_browser</i></a>
+                            <button id="btn-logout" class="btn waves-effect waves-light btn-logout hidden" type="submit"
+                                name="action">logout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="modal1" class="modal bottom-sheet modal-buy">
+                <div class="modal-content">
+                    <div id="modal-interaction">
+                        <img class="img-order" src="images/assets/undraw_order_confirmed_aaw7.svg" alt="">
+                        <h4 class="head-modal">Horeeeyy!! <br> Orderan Sukses&#128079</h4>
+                        <p>Tinggal 1 langkah lagi nih. <br> Kuy, kirim jajanan kamu lewat LINE</p>
+                    </div>
+                    <button id="send-message" class="btn modal-trigger waves-effect waves-light btn-send" type="submit"
+                        name="action" data-target="modal1">kirim</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <img class="logo-jk" src="images/assets/JajanKuy.png" alt="">
+            <p>Aplikasi ini dikembangkan dengan menggunakan <br> <a class="blue-text"
+                    href="https://developers.line.biz/en/reference/liff/">LIFF LINE Front-End Framework v2 API</a> dan
+                <a class="blue-text" href="https://materializecss.com/">Materialize</a></p>
+            <p class="grey-text"><a class="grey-text" href="https://www.flaticon.com/authors/freepik">Icons Source</a>
+                &nbsp;|&nbsp; <a class="grey-text" href="https://www.flaticon.com/authors/freepik">Photos Source</a>
+                &nbsp;|&nbsp; <a class="grey-text" href="https://undraw.co">Illustration Source</a> </p>
+        </div>
+    </footer>
+
+    <script src="scripts/materialize.min.js"></script>
+    <script src="scripts/storage.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script src="scripts/liff-starter.js"></script>
+
+</body>
+
+</html>

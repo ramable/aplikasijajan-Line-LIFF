@@ -1,0 +1,95 @@
+{
+    "status": "Success",
+    "items": [
+        {
+            "id": 1,
+            "title": "Odading Mang Oleh",
+            "price": 7000000,
+            "image": "/images/photos/product-1.jpg"
+        },
+        {
+            "id": 2,
+            "title": "Bakso Aci Mpok Aca",
+            "price": 8000000,
+            "image": "/images/photos/product-2.jpg"
+        },
+        {
+            "id": 3,
+            "title": "Dalgona Coffee Gak Bikin Kembung",
+            "price": 3200000,
+            "image": "/images/photos/product-3.jpg"
+        },
+        {
+            "id": 4,
+            "title": "Donat Indomie Warung Bu Rojo",
+            "price": 950000,
+            "image": "/images/photos/product-4.jpg"
+        },
+        {
+            "id": 5,
+            "title": "Boba Bocil",
+            "price": 1800000,
+            "image": "/images/photos/product-5.jpg"
+        },
+        {
+            "id": 6,
+            "title": "Seblak Cablak",
+            "price": 5000000,
+            "image": "/images/photos/product-6.jpg"
+        },
+        {
+            "id": 7,
+            "title": "Manggo Desert Bu Juleha",
+            "price": 3500000,
+            "image": "/images/photos/product-7.jpg"
+        },
+        {
+            "id": 8,
+            "title": "Doreyaki Nobita",
+            "price": 2500000,
+            "image": "/images/photos/product-8.jpg"
+        },
+        {
+            "id": 9,
+            "title": "Salted Egg Cap Stempel",
+            "price": 4500000,
+            "image": "/images/photos/product-9.jpg"
+        },
+        {
+            "id": 10,
+            "title": "Telor Gulung Ombak",
+            "price": 700000,
+            "image": "/images/photos/product-10.jpg"
+        },
+        {
+            "id": 11,
+            "title": "Takoyaki Jejepangan",
+            "price": 2800000,
+            "image": "/images/photos/product-11.jpg"
+        },
+        {
+            "id": 12,
+            "title": "Kue Cubit Cubitan",
+            "price": 200000,
+            "image": "/images/photos/product-12.jpg"
+        },
+        {
+            "id": 13,
+            "title": "Banana Nugget Uget-Uget",
+            "price": 4000000,
+            "image": "/images/photos/product-13.jpg"
+        },
+        {
+            "id": 14,
+            "title": "Cilok isi Aci",
+            "price": 5000000,
+            "image": "/images/photos/product-14.jpg"
+        },
+        {
+            "id": 15,
+            "title": "Cimol Bumbu Micin",
+            "price": 2300000,
+            "image": "/images/photos/product-15.jpg"
+        }
+        ]
+}
