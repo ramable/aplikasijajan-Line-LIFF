@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const elems = document.querySelector('.modal');
     instances = M.Modal.init(elems);
 
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
     getFoodCards()
 })
 
