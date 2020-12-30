@@ -80,9 +80,8 @@ function displayIsInClientInfo() {
 
 function getClientProfile() {
     liff.getProfile().then(data => {
-            console.log(document.querySelector(".profile"))
             document.querySelectorAll(".display-name").innerText = data.displayName;
-            document.getElementById("user-id").innerText = data.userId;
+            document.getElementById("status").innerText = data.statusMessage;
             document.querySelectorAll(".display-picture").innerHTML = `<img class="circle responsive-img" src="${data.pictureUrl}">`;
             document.getElementById("display-cover").innerHTML = `<div class="cover" style="background-image: url(${data.pictureUrl});">
             </div>`;
