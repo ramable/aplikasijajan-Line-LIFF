@@ -54,6 +54,7 @@ function initializeApp() {
     displayIsInClientInfo();
     getClientProfile()
     registerButtonHandlers();
+
     if (liff.isLoggedIn()) {
         isloaded()
         document.querySelector(".login-page").classList.add("hidden");
@@ -80,6 +81,8 @@ function displayIsInClientInfo() {
     }
 }
 
+
+
 function getClientProfile() {
     liff.getProfile().then(data => {
             document.querySelector(".display-name").innerText = data.displayName;
@@ -89,6 +92,10 @@ function getClientProfile() {
             document.querySelector(".header-photo").innerHTML = `<img class="circle responsive-img" src="${data.pictureUrl}">`;
             document.getElementById("display-cover").innerHTML = `<div class="cover" style="background-image: url(${data.pictureUrl});">
             </div>`;
+        })
+        .then(data => {
+            const userName = data.displayName;
+            return userName
         })
         .catch((err) => {
             console.log(err);
@@ -142,10 +149,8 @@ function sendReport() {
         `;
     });
 
-    const nameUser = liff.getProfile().then(data => data.displayName);
-
     let msgContent = `
-    Hai ${nameUser},
+    Hallo,
 
     Selamat!! Kamu baru saja berhemat dengan total jajan cuma Rp ${currencyConvert(tempTotal)} di aplikasi JajanKuy.
     
