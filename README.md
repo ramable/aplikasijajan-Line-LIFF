@@ -2,7 +2,7 @@
  This is a food web application that use the basic functionality of the [LINE Front-End Framework (LIFF v2).](https://developers.line.biz/en/docs/liff/overview/)
  
  ### Prerequisite
- To start developing this app, we must first create [a provider and a channel](https://developers.line.biz/en/docs/liff/getting-started/) on the [LINE Developers Console](https://developers.line.biz/console) to get a channel access token.
+ To start developing this app, we must first [create a provider and a channel](https://developers.line.biz/en/docs/liff/getting-started/) on the [LINE Developers Console](https://developers.line.biz/console) to get a channel access token.
  
  ### Deploy
  * [Heroku](https://www.heroku.com/)
