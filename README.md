@@ -6,6 +6,7 @@
  
  ### Deploy
  * [Heroku](https://www.heroku.com/)
+
 To get more information about deployment method, please check the documentation about [using Heroku CLI.](https://devcenter.heroku.com/articles/git)
  
  ### Running the app
@@ -19,4 +20,5 @@ To get more information about deployment method, please check the documentation 
  1. Enter the LIFF URL `https://liff.line.me/{liffId}` on the LINE chat screen. `{liffId}` was created when adding the LIFF app.
  2. Tap the LIFF URL displayed in the bubble to open the LIFF app.
  3. Agree to grant the required permissions to the LIFF app.
+
 For more information please check this [official documentation.](https://developers.line.biz/en/docs/liff/opening-liff-app/)
